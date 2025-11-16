@@ -38,5 +38,11 @@ LBL: LODSB ; AL = [SI], DEC SI
      INC DI
      LOOP LBL
 CLD
-MOV [DI], '$'
+MOV [DI], '$'             
+
+;PRINT THE REVERSED STRING
+
+LEA DX, REV
+MOV AH, 09H
+INT 21H
 HLT
